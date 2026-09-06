@@ -1,0 +1,203 @@
+______________________________________________________#promotional_Video_prompt#_______________________________________________
+
+_______________________________________________
+
+Using the attached exam Content/Guide/Syllabus "{Course_doc}" and the attached JSON template (it's height important to respect the JSON template), generate a complete `video_content.json` file (ready to download) for a Udemy promotional video for the following course:
+
+{Course_title} — Practice Exams
+
+The practice exam course is organized as follows (Use the following exam organization exactly):
+
+	Exam 1  {Exam_1_title}
+	Exam 2  {Exam_2_title}
+	Exam 3  {Exam_3_title}
+	Exam 4  {Exam_4_title}
+	Exam 5  {Exam_5_title}
+	Exam 6  {Exam_6_title}
+
+## Exam percentage
+* Exam 1:  {Exam_1_percentage} %
+* Exam 2:  {Exam_2_percentage} %
+* Exam 3:  {Exam_3_percentage} %
+* Exam 4:  {Exam_4_percentage} %
+* Exam 5:  {Exam_5_percentage} %
+* Exam 6:  {Exam_6_percentage} %
+ 
+## Source and structure requirements
+1. Use the attached exam content as the only factual source.
+2. Use the attached JSON template as the exact structural reference.
+3. Preserve exactly the same:
+   * JSON keys
+   * Property order
+   * Nested structure
+   * Data types
+   * Number of scenes
+   * Number of exams
+   * Scene IDs
+   * Scene types
+   * Exam numbers
+   * Exam references
+   * Exam types
+4. The final JSON must contain exactly:
+   * 10 scenes
+   * 6 exams
+5. Do not add, remove, rename, reorder, or change the data type of any JSON property.
+6. Replace only course-specific values, including:
+   * Course title
+   * Certification name
+   * Exam or blueprint name
+   * Headlines
+   * Subheadlines
+   * Voiceovers
+   * Topics
+   * Summaries
+   * Domain names
+   * Visual notes
+   * Learning objectives
+   * Benefits
+   * Calls to action
+   * Other course-specific text values
+Distribute the source content logically across these exams.
+Do not move a topic into an exam unless the attached exam content supports that classification.
+## Required scene-to-exam relationships
+Preserve these exact references:
+* `scene_03` → exam 1
+* `scene_04` → exam 2
+* `scene_05` → exam 3
+* `scene_06` → exam 4
+* `scene_07` → exam 5
+* `scene_08` → exam 6
+Do not change these relationships.
+## Content accuracy requirements
+1. Do not invent or infer unsupported:
+   * Exam objectives
+   * Official domain weights
+   * Technologies
+   * Tools
+   * Products
+   * Commands
+   * Frameworks
+   * Certification details
+   * Exam policies
+   * Question counts
+   * Passing scores
+   * Course features
+   * Guarantees
+   * Claims about exam success
+2. Include only facts explicitly supported by the attached exam content.
+3. When the source does not provide an official weight, percentage, count, or measurable value, do not create one.
+4. When the JSON template requires a field but the source does not provide a specific factual value, write a concise neutral value that does not introduce unsupported claims.
+5. Keep terminology consistent with the attached exam content.
+6. Avoid duplicated topics, summaries, benefits, and voiceover wording whenever possible.
+## Writing requirements
+1. Write professional, modern, concise promotional content suitable for a Udemy course video.
+2. Voiceovers must:
+   * Sound natural when spoken aloud
+   * Be concise and engaging
+   * Match the purpose of each scene
+   * Avoid exaggerated marketing language
+   * Avoid unsupported guarantees
+   * Clearly distinguish the six practice exams
+   * Use accurate cybersecurity terminology from the source
+3. Headlines and visual text must be short enough to display clearly in a promotional video.
+4. Learning objectives and benefits must reflect only what learners can practice based on the attached exam content.
+
+
+______________________________________________________#cours_prompt#___________________________________________________________
+
+I want to  Creating an Udemy Parctice Test course (directly generate the downloadable .csv file to upload in Udemy).
+
+#Before Starting you should know the Practice Test Bulk Question Upload Template used by Udemy
+PracticeTestBulkQuestionUploadTemplate_v2.csv:
+Question,Question Type,Answer Option 1,Explanation 1,Answer Option 2,Explanation 2,Answer Option 3,Explanation 3,Answer Option 4,Explanation 4,Answer Option 5,Explanation 5,Answer Option 6,Explanation 6,Correct Answers,Overall Explanation,Domain
+"What is the name for a 5-sided polygon?",multiple-choice,"Hexagon","Hexagons have six sides.","Pentagon","A pentagon has five sides (the root ""pent"" means ""five,"" like how an athletic pentathlon has five events). ","Square","Squares have four sides.","Decagon","Decagons have ten sides.",,,,,2,,"Geometry"
+"Which of the following are woodwind instruments?",multi-select,"Oboe",,"Trumpet",,"Flute",,"Bassoon",,"Violin",,"Timpani",,"1,3,4","Clarinets, flutes, oboes, bassoons, contrabasoons, and English horns make up the core of the woodwind family. Trumpets are wind instruments but not woodwinds - they belong to the brass family. Violins and timpani are strings and percussion, respectively.","Music"
+"What is the atomic symbol for Gold?",multiple-choice,"Go","Go is not the atomic symbol for any element.","Gd","The atomic symbol for the element Gadolinium is Gd.  ","Ag","The atomic symbol for the element Silver is Ag.","Au","The atomic symbol for the element Gold is Au. This actually comes from the Latin ""aurum,"" which means ""gold.""","Gl","Gl is not the atomic symbol for any element.",,,4,,"Chemistry"
+"True or false: Udemy is pronounced ""YO1-deh-mee.""",multiple-choice,"TRUE",,"FALSE",,,,,,,,,,1,"The emphasis in Udemy's name occurs on the first syllable, ""you!""","Udemy"
+"Pick the names that are both Renaissance artists and Ninja Turtles.",multi-select,"Botticelli",,"Leonardo",,"Donatello",,"Raphael",,"Lotto",,"Michelangelo",,"2,3,4,6","All of these names are noted Renaissance artists, but only four - Leonardo, Donatello, Raphael, and Michelangelo - are also Teenage Mutant Ninja Turtles.","Pop culture"
+"Who wrote the famous Hallelujah Chorus?",multiple-choice,"Haydn","Haydn was contemporaries of Handel.","Handel","The Hallelujah Chorus is part of Handel's ""Messiah"" oratorio. ","Bach","Bach was contemporaries of Handel.","Mozart","Mozart came much later than Handel.","Spears","Spears came much later than Handel.",,,2,,"Music"
+
+
+
+# Requirements: "{Course_title} Practice Exams" to prepare perfectly into the certification
+	- Creating Exams per content domains based on the "{Course_doc}"  Exam Guide/Syllabus
+	- Practice Exams without any duplicated questions within a single exam or across all exams, in order to cover the full Exam Guide as much as possible.
+
+
+# Exam Structure:
+	- The exam mix between multiple-choice and multi-select questions type
+	- The exam should contains one or more of the following question types : Multiple choice,  Multiple response,scenarios questions, Ordering and Matching questions; as long as our PracticeTestBulkQuestionUploadTemplate_v2 containe only "multiple-choice" or "multi-select" we will use them  to creat Multiple choice, Multiple response, Ordering and Matching questions.
+	- Each answer should have an Explanation (This is very important to learn from the question) also a Overall Explanation allows student learn more.
+	- Exams:
+
+	Exam 1 (40 questions ) to cover the {Course_provider_name}  {Course_short_title} {Exam_1_title}
+	Exam 2 (40 questions ) to cover the {Course_provider_name}  {Course_short_title} {Exam_2_title}
+	Exam 3 (40 questions ) to cover the {Course_provider_name}  {Course_short_title}  {Exam_3_title}
+	Exam 4 (40 questions ) to cover the {Course_provider_name}  {Course_short_title}  {Exam_4_title}
+	Exam 5 (40 questions ) to cover the {Course_provider_name}  {Course_short_title}  {Exam_5_title}
+	Exam 6 (40 questions ) to cover the {Course_provider_name}  {Course_short_title}   {Exam_6_title}
+
+
+
+
+
+### It's Very important (it's Critical) to respect the PracticeTestBulkQuestionUploadTemplate_v2.csv Udemy Practice exam format , Otherwise  Udemy will be not accept the upload csv file
+
+Starting exam by exam not all at one time to ensure hight performance and precision in the  questions, thier Answers Options and  Explanations
+	Let's proceed the exam 1: {Exam_1_title}
+
+
+
+____________________________________________________________#cours_image#______________________________________________________
+
+# Design a professional and modern Udemy course image that strongly attracts student attention. The image must meet the following requirements:
+
+- Dimensions: exactly 750x422 pixels (critical requirement).
+- Format: .png.
+- Theme: visually represent the concept of "{Course_title} Practice Exams " through abstract, symbolic, or conceptual design elements (no direct text).
+- Include {Course_provider_name} logo, placed subtly and cleanly without overlaying or cluttering the layout.
+- Create a distinctive background and foreground design that conveys exam preparation, technology, and professionalism — for example, futuristic digital patterns, abstract exam-related motifs, or certification-inspired visuals.
+- Ensure the design feels modern, sleek, and trustworthy, with balanced colors and composition that highlight the logos and overall theme.
+- Avoid textual information other than the permitted logos.
+- The course image must not include any Udemy logo or reference to a Udemy logo.
+
+
+
+
+_________________________________________________________#cours_info#___________________________________________________________
+
+I want to provide the following information in a professional manner to help my Udemy practice exam course appear more prominently to learners across all browser searches.
+
+#Intended learners:
+What will students learn in your course? (in 160 characters as maximum for each item)
+	You must enter at least 7 learning objectives or outcomes that learners can expect to achieve after completing your course.
+
+What are the requirements or prerequisites for taking your course? (at least 6)
+	List the required skills, experience, tools or equipment learners should have prior to taking your course.
+	If there are no requirements, use this space as an opportunity to lower the barrier for beginners.
+
+Who is this course for? (at least 5)
+	Write a clear description of the intended learners for your course who will find your course content valuable.
+This will help you attract the right learners to your course.
+
+
+#Course landing page:
+Course title?
+	Your title should be a mix of attention-grabbing, informative, and optimized for search
+
+Course subtitle? (in 120 Letters as maximum)
+	Use 1 or 2 related keywords, and mention 3-4 of the most important areas that you've covered during your course.
+
+Course description?
+	Description should have minimum 300 words.
+
+What is primarily taught in your course? (4 primarily taught )
+	Each individual topic chosen should comprehensively describe your course's content without being too broad. E.g. "The Complete Tennis Course" should have "Tennis" – not "Tennis Serve" (specific, but not comprehensive) and not "Sports" (comprehensive, but not specific).
+
+
+#Course messages:
+	 Welcome Message
+	 Congratulations Message
+
+All course information will be generated in JSON format, following the "cours_info.json" template and the "FORMATTING_GUIDE.md" provided in the chat.
+

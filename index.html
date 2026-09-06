@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Udemy Course Template Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Udemy Course Template Manager</h1>
+      <p>Enter course information → generate in memory → copy the sections you need.</p>
+    </div>
+    <div class="top-actions">
+      <button class="secondary" id="loadJsonBtn">Import JSON</button>
+      <button class="secondary" id="saveJsonBtn">Download JSON</button>
+      <button class="primary" id="generateBtn">Generate</button>
+      <button class="ghost" id="clearBtn">Clear</button>
+      <input type="file" id="jsonFile" accept="application/json,.json" hidden>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel form-panel">
+      <div class="panel-title"><span>1</span><div><h2>Course information</h2><p>Fill in the course and six exam definitions.</p></div></div>
+      <div class="grid course-grid">
+        <label>Course Title<input id="Course_title" autocomplete="off"></label>
+        <label>Course Document / Exam Guide<input id="Course_doc" autocomplete="off"></label>
+        <label>Course Provider<input id="Course_provider_name" autocomplete="off"></label>
+        <label>Course Short Title<input id="Course_short_title" autocomplete="off"></label>
+      </div>
+
+      <div class="exam-heading"><h3>Exams</h3><span>Percentage is shown beside each exam title in the generated promotional prompt.</span></div>
+      <div id="examGrid" class="exam-grid"></div>
+      <div class="hint">Generated content is kept only in this browser tab. Nothing is written to the server or saved as a generated TXT file.</div>
+    </section>
+
+    <section class="panel output-panel">
+      <div class="panel-title"><span>2</span><div><h2>Generated version</h2><p>Preview is generated entirely in your browser.</p></div></div>
+      <div class="output-toolbar">
+        <button class="secondary" id="refreshBtn">Refresh preview</button>
+        <button class="secondary" id="copyAllBtn">Copy entire version</button>
+        <span id="status" class="status">Ready.</span>
+      </div>
+      <textarea id="preview" spellcheck="false" placeholder="Click Generate to create the version..."></textarea>
+    </section>
+
+    <section class="panel sections-panel">
+      <div class="panel-title"><span>3</span><div><h2>Copy sections</h2><p>Each button copies one section directly to the clipboard.</p></div></div>
+      <div id="sectionCards" class="section-cards"></div>
+    </section>
+  </main>
+
+  <footer>Static client-side app • GitHub Pages compatible • No generated versions are stored</footer>
+  <script src="app.js"></script>
+</body>
+</html>
