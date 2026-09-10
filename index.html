@@ -37,8 +37,13 @@
       <div class="hint">Generated content is kept only in this browser tab. Nothing is written to the server or saved as a generated TXT file.</div>
     </section>
 
+    <section class="panel sections-panel">
+      <div class="panel-title"><span>2</span><div><h2>Copy sections</h2><p>Copy or download each generated section independently.</p></div></div>
+      <div id="sectionCards" class="section-cards"></div>
+    </section>
+
     <section class="panel output-panel">
-      <div class="panel-title"><span>2</span><div><h2>Generated version</h2><p>Preview is generated entirely in your browser.</p></div></div>
+      <div class="panel-title"><span>3</span><div><h2>Generated version</h2><p>Preview is generated entirely in your browser.</p></div></div>
       <div class="output-toolbar">
         <button class="secondary" id="refreshBtn">Refresh preview</button>
         <button class="secondary" id="copyAllBtn">Copy entire version</button>
@@ -47,11 +52,9 @@
       <textarea id="preview" spellcheck="false" placeholder="Click Generate to create the version..."></textarea>
     </section>
 
-    <section class="panel sections-panel">
-      <div class="panel-title"><span>3</span><div><h2>Copy sections</h2><p>Each button copies one section directly to the clipboard.</p></div></div>
-      <div id="sectionCards" class="section-cards"></div>
-    </section>
   </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
   <footer>Static client-side app • GitHub Pages compatible • No generated versions are stored</footer>
   <script src="app.js"></script>
